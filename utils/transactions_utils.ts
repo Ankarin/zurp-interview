@@ -3,7 +3,9 @@
 import { Transaction } from "@/types/transaction";
 
 export const onlyValidTransactions = (transactions: Transaction[]): Transaction[] => {
-    return transactions.filter((transaction) => transaction.type !== "backout");
+    return transactions
+        .filter((transaction) => transaction.type !== "backout")
+        .sort((a, b) => b.timestamp - a.timestamp);
 };
 
 export const removeDuplicates = (transactions: Transaction[]): Transaction[] => {

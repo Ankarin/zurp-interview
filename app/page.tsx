@@ -27,7 +27,7 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center p-24 max-w-4xl mx-auto">
         <div className={'flex w-full justify-between items-center '}>
           <div>
-            <p className={'rounded-lg bg-white p-4 shadow font-semibold'}>Last fetched ~{lastFetched}</p>
+            <p className={'rounded-lg bg-white p-4 shadow font-semibold'}>Last updated~{lastFetched}</p>
           </div>
           <div className={'text-center'}>
             <p className={'font-bold text-lg'}>{currentDay}</p>
