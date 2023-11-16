@@ -18,7 +18,7 @@ export const TransactionsCard = ({transactions, title,}: { transactions: Transac
                             <p>${transaction.amount}</p>
                             <span className={"px-3"}>&bull;</span>
                             <p>
-                                {transaction.pointAmount} points {transaction.type}
+                                {transaction.pointAmount} points
                             </p>
                         </div>
                     </li>
