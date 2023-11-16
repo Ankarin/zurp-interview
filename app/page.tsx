@@ -9,11 +9,11 @@ import { Transactions } from '@/components/Transactions';
 
 export default function Home() {
   const { data, loading, lastFetchedTime, fetchNextDay, currentDay }: UseTransactionHook = useTransactions();
-  const [lastFetched, setLastFetched] = useState('0 seconds ago');
+  const [lastFetched, setLastFetched] = useState(' 0 seconds ago');
   useEffect(() => {
-    setLastFetched(lastFetchedTime.toRelative());
+    setLastFetched(lastFetchedTime.toRelative()??'0 seconds ago');
     const intervalId = setInterval(() => {
-      setLastFetched(lastFetchedTime.toRelative());
+      setLastFetched(lastFetchedTime.toRelative() ?? '0 seconds ago');
     }, 15000);
     return () => clearInterval(intervalId);
   }, [data]);
