@@ -36,7 +36,7 @@ export function useTransactions():UseTransactionHook {
       loading,
       fetchNextDay,
       data,
-      currentDay: currentDate.current.toFormat("DDD"),
+      currentDay: currentDate.current.toFormat("MMMM d, yyyy"),
       lastFetchedTime: lastFetchedTime
     }),
     [fetchNextDay, data, lastFetchedTime, loading]
